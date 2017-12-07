@@ -2,11 +2,14 @@
 
 scrAttack();
 
+
+
 ///// Grapple functionality /////
 // The iGrappleRadius variable seems to be a bit janky. She can grapple when she's near an instance of objGrappleBlock, but she does not grapple the nearest one
 // only the first one
 // it doesn't matter what instance layer the Grapple Point is on, either 
 // Need to figure out why it's only drawing the physics joint rope on that singular objGrappleBlock... 
+// NO ATTACKING WHILE GRAPPLING
 if(keyboard_check_pressed(vk_up)) || (gamepad_button_check_pressed(0, gp_face3)) && (instance_exists(objGrappleBlock)) && (distance_to_object(objGrappleBlock) < iGrappleRadius)
 {
 	active = true;
@@ -25,7 +28,7 @@ if(keyboard_check_pressed(vk_up)) || (gamepad_button_check_pressed(0, gp_face3))
 }
 
 
-if(keyboard_check_released(vk_up)) && (active == true)|| (gamepad_button_check_released(0, gp_face3)) && (active == true)
+if(keyboard_check_released(vk_up)) && (active == true) || (gamepad_button_check_released(0, gp_face3)) && (active == true)
 {
 	physics_joint_delete(jointGrapple);
 	active = false;
@@ -39,7 +42,7 @@ if(keyboard_check_released(vk_up)) && (active == true)|| (gamepad_button_check_r
 
 if(keyboard_check(ord("D"))) || (gamepad_button_check(0, gp_padr)) || (gamepad_axis_value(0,gp_axislh) > 0.1)
 {
-	image_xscale = 1;
+	bFacingRight = true;
 	physics_apply_force(x, y, 310, 0);
 	hspeed = 3;
 	sprite_index= sprWalk; 
@@ -61,7 +64,7 @@ if(keyboard_check(ord("D"))) || (gamepad_button_check(0, gp_padr)) || (gamepad_a
 
 if(keyboard_check(ord("A"))) || (gamepad_button_check(0, gp_padl)) || (gamepad_axis_value(0,gp_axislh) < -0.1)
 {
-	image_xscale = -1;
+	bFacingRight = false;
 	physics_apply_force(x, y, -310, 0);
 	hspeed = -3;
 	sprite_index = sprWalk;
@@ -85,7 +88,7 @@ if(active == true) && (hspeed == 0)
 {
 	sprite_index = sprHang; 
 }	
-
+/*
 if(!keyboard_check(ord("A"))) && !keyboard_check(ord("D")) 
 {
 	if(bOnGround == true)
@@ -102,7 +105,7 @@ if position_meeting(x,y, objMovingPlatformPhys)
 	  //vspeed:=0;
 	  //hspeed = other.hspeed;
   }   
-	   
+*/	   
 /// END PLAYER MOVEMENT ///	   
 	     
 /// SLIDE DASH/DODGE CODE ///
@@ -194,3 +197,14 @@ if (iCurrentHP <= 0)
 	instance_destroy(objPlayerGrapple);
 	room_goto(rmDeathScreen);
 } 
+
+
+//FACING RIGHT
+if bFacingRight == true
+{
+	image_scale = 1;
+}
+else
+{
+	image_scale = -1;
+}
