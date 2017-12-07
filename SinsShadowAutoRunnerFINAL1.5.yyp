@@ -415,6 +415,14 @@
             }
         },
         {
+            "Key": "80f0a88d-419a-42ad-ae2a-073675289c12",
+            "Value": {
+                "id": "846aa023-a50e-426d-97ae-86dd447abba2",
+                "resourcePath": "objects\\objCollisionPhysLOWHALF\\objCollisionPhysLOWHALF.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "81f5b88b-ca38-4f68-8947-b274e6fcf52f",
             "Value": {
                 "id": "173c09f8-d947-4557-b9e7-d9c62c678eb2",
@@ -471,6 +479,14 @@
             }
         },
         {
+            "Key": "9cc87eeb-dc0b-4f43-8cb7-cd3d162f598d",
+            "Value": {
+                "id": "fc4a857c-9198-45d3-bd62-a84a64a9b3b2",
+                "resourcePath": "scripts\\scrGrapple\\scrGrapple.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "a15fac20-5e7d-4d62-8ae3-1afc3a3630e8",
             "Value": {
                 "id": "1df43226-3496-4bd9-9068-077356c52764",
@@ -516,6 +532,14 @@
                 "id": "801cf28e-d873-4aff-b7ed-daa1be7224f1",
                 "resourcePath": "objects\\objBat\\objBat.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "a793d478-1aa1-4065-adb7-da2a443ba975",
+            "Value": {
+                "id": "d5ce765d-ba55-478d-a806-641e281a1431",
+                "resourcePath": "scripts\\scrPlayerMovement\\scrPlayerMovement.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -839,6 +863,14 @@
             }
         },
         {
+            "Key": "fc76df27-f91b-47ea-b5b6-72ed8ef75ae6",
+            "Value": {
+                "id": "4440fad9-b504-43bb-ab00-168511e46b8e",
+                "resourcePath": "sprites\\sprHalfCollisionLOW\\sprHalfCollisionLOW.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "fd056b22-90ae-4bcd-8cdf-2548e587420c",
             "Value": {
                 "id": "3ce084e5-0838-429c-8554-2dad8f164290",
@@ -856,7 +888,9 @@
         }
     ],
     "script_order": [
-        "02eb2643-4ff9-4fd0-8da7-880aba6dae7b"
+        "02eb2643-4ff9-4fd0-8da7-880aba6dae7b",
+        "9cc87eeb-dc0b-4f43-8cb7-cd3d162f598d",
+        "a793d478-1aa1-4065-adb7-da2a443ba975"
     ],
     "tutorial": ""
 }
