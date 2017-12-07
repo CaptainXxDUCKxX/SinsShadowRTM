@@ -1,3 +1,4 @@
+
 if(mouse_check_button_pressed(mb_left))
 {
 	bAttackAnim = true;
@@ -19,4 +20,16 @@ else
 		sprite_index = sprIdle;
 	}
 }
-
+/*
+	if(keyboard_check_pressed("D"))
+	{
+		switch(sprite_index)
+		{
+			case sprWalk:
+			case sprSwordAtk:
+			image_speed = .5
+			//sprite_index = sprSwordAtk;//switches the sprite
+			//break;//completed what was done and move on
+		}
+	}
+*/
