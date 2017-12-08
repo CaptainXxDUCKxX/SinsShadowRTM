@@ -3,11 +3,11 @@
 
 if !position_empty((x - 78), (y - 26.5))
 {
-	show_debug_message("Collision");
+	//show_debug_message("Collision");
 }
 if position_empty((x - 78), (y - 26.5))
 {
-	show_debug_message("No collision");
+	//show_debug_message("No collision");
 }
 
 if !position_empty((x + 78), (y - 26.5))

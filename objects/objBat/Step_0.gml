@@ -34,7 +34,7 @@ if bCanAttack == false
 if tAttackRefresh <= 0
 	{
 		bCanAttack = true;
-		tAttackRefresh = 180;
+		tAttackRefresh = 180;		
 	}
 
 
@@ -49,6 +49,7 @@ hit = instance_place (x, y, objSwordHitbox);
 if (hit != noone)
 	{
 	//hit.batHP -= 1; BREAKING GAME
+	audio_play_sound(sndSliceAttack, 5, false);
 	instance_destroy ();
 	}
 	
@@ -66,18 +67,20 @@ iPrevFrameX = x;
 // physics collision
 if collision_rectangle(bbox_left, bbox_top, bbox_right, bbox_bottom, objPlayerGrapple, false, true) != noone
 {
-    //damage logic
+
+	//damage logic
 	if (objPlayerGrapple.bCanTakeDamage == 1 && bCanAttack == true)
 		{
-			objPlayerGrapple.iCurrentHP -= iBatDamage;
+			objPlayerGrapple.iCurrentHP -= iBatDamage;			
 			objPlayerGrapple.bCanTakeDamage = 0;
-			objPlayerGrapple.bGotHit = 1;
+			objPlayerGrapple.bGotHit = 1;			
 		}
+
 	bCanAttack = false;
-	
 //Debug
 objPlayerGrapple.iCurrentHP -= iBatDamage;
 }
+
 
 //Debug messages
 //show_debug_message(tAttackRefresh);
