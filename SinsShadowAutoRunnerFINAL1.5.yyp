@@ -383,6 +383,14 @@
             }
         },
         {
+            "Key": "7b438769-1a4d-41f4-8d74-8f63a0cd0eeb",
+            "Value": {
+                "id": "ba14bf42-61c9-47ad-b61f-ebcf152066cb",
+                "resourcePath": "sprites\\sprHurt\\sprHurt.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "7c7abd99-9576-4717-89df-ea901c95e380",
             "Value": {
                 "id": "3afcf8b6-242c-4747-a65b-6f905836f1c6",
