@@ -12,7 +12,7 @@ scrAttack();
 // NO ATTACKING WHILE GRAPPLING
 if(keyboard_check_pressed(vk_up)) || (gamepad_button_check_pressed(0, gp_face3)) && (instance_exists(objGrappleBlock)) && (distance_to_object(objGrappleBlock) < iGrappleRadius)
 {
-	active = true;
+	bGrappling = true;
 	instNearestGP = instance_nearest(x, y, objGrappleBlock);
 	jointGrapple = physics_joint_rope_create(objPlayerGrapple, instNearestGP, (objPlayerGrapple.x + 9), (objPlayerGrapple.y - 41), instNearestGP.x, instNearestGP.y, 100, true); 
 	bJumping = false;
@@ -23,15 +23,15 @@ if(keyboard_check_pressed(vk_up)) || (gamepad_button_check_pressed(0, gp_face3))
 		my = instNearestGP.y;*/
 	if(distance_to_object(objGrappleBlock) > iGrappleRadius) 
 	{ 
-		active = false;
+		bGrappling = false;
 	}
 }
 
 
-if(keyboard_check_released(vk_up)) && (active == true) || (gamepad_button_check_released(0, gp_face3)) && (active == true)
+if(keyboard_check_released(vk_up)) && (bGrappling == true) || (gamepad_button_check_released(0, gp_face3)) && (bGrappling == true)
 {
 	physics_joint_delete(jointGrapple);
-	active = false;
+	bGrappling = false;
 	
 }
 
@@ -40,51 +40,57 @@ if(keyboard_check_released(vk_up)) && (active == true) || (gamepad_button_check_
 ///// PLAYER MOVEMENT /////
 //if(hspeed == 0) sprite_index = sprIdle;
 
-if(keyboard_check(ord("D"))) || (gamepad_button_check(0, gp_padr)) || (gamepad_axis_value(0,gp_axislh) > 0.1)
+if(keyboard_check(ord("D"))) || (gamepad_button_check(0, gp_padr)) || (gamepad_axis_value(0,gp_axislh) > 0.1) && bAttacking == false
 {
 	bFacingRight = true;
 	physics_apply_force(x, y, 310, 0);
 	hspeed = 3;
-	sprite_index= sprWalk; 
-	if(active == true)
+	if bAttacking == false
+	{
+		sprite_index = sprWalk;
+	} 
+	if(bGrappling == true)
 	{
 		physics_apply_angular_impulse(100);
 		sprite_index = sprAmeliaSwing;
 	}
+	/*
 	if(keyboard_check(vk_down)) || (gamepad_button_check(0, gp_shoulderr))
 	{
-		bCanSlide = true;
 		tStopSlide = 2;
 		bUnspaced = false;
-		bOnGround = true;
 		//physics_apply_force(x,y,580,0);
 		sprite_index = sprSlide; 
 	}
+	*/
 }
 
-if(keyboard_check(ord("A"))) || (gamepad_button_check(0, gp_padl)) || (gamepad_axis_value(0,gp_axislh) < -0.1)
+if(keyboard_check(ord("A"))) || (gamepad_button_check(0, gp_padl)) || (gamepad_axis_value(0,gp_axislh) < -0.1) && bAttacking == false
 {
 	bFacingRight = false;
 	physics_apply_force(x, y, -310, 0);
 	hspeed = -3;
-	sprite_index = sprWalk;
-	if(active == true)
+	if bAttacking == false
+	{
+		sprite_index = sprWalk;
+	}
+	if(bGrappling == true)
 	{
 		physics_apply_angular_impulse(-100);
 		sprite_index = sprAmeliaSwing;
 	}
+	/*
 	if(keyboard_check(vk_down)) || (gamepad_button_check(0, gp_shoulderr))
 	{
-		bCanSlide = true; 
 		tStopSlide = 2;
 		bUnspaced = false;
-		bOnGround = true;
 		//physics_apply_force(x,y,-580,0);
 		sprite_index = sprSlide; 
 	}
+	*/
 }
 
-if(active == true) && (hspeed == 0)
+if(bGrappling == true) && (hspeed == 0)
 {
 	sprite_index = sprHang; 
 }	
@@ -113,23 +119,28 @@ if position_meeting(x,y, objMovingPlatformPhys)
 //She can apply the force in the air for some reason.
 //Fix Application of force when vk_down is pressed in air
 //limit the usage of slide dash to be much shorter; it can be used infinitely, given Amelia has stamina
-if keyboard_check(vk_down) || (gamepad_button_check(0, gp_shoulderr)) && keyboard_check(ord("D")) && iCurrentStamina > 14  
+if keyboard_check(vk_down) || (gamepad_button_check(0, gp_shoulderr)) && keyboard_check(ord("D")) && iCurrentStamina > 14 && bCanSlide == true
 {
+	bDashing = true;
 	bUnspaced = true;
-	iCurrentStamina -= 1; 
+	iCurrentStamina -= 0.25; 
 	physics_apply_force(x,y,1000,0);
 	sprite_index = sprSlide;
 }
-if keyboard_check(vk_down)|| (gamepad_button_check(0, gp_shoulderr))&& keyboard_check(ord("A")) && iCurrentStamina > 14  
-
+if keyboard_check(vk_down) || (gamepad_button_check(0, gp_shoulderr)) && keyboard_check(ord("A")) && iCurrentStamina > 14 && bCanSlide == true
 {
+	bDashing = true;
 	bUnspaced = true;
-	iCurrentStamina -= 1; 
+	iCurrentStamina -= 0.25; 
 	physics_apply_force(x,y,-1000,0);
 	sprite_index = sprSlide;
 }
+if keyboard_check_released(vk_down)
+{
+	bDashing = false;
+}
 
-/// END SLIDE DASH /// 
+/// END SLIDE DASH ///
 
 /////// JUMP CONDITIONS AND FUNCTIONALITY //////
 
@@ -144,10 +155,15 @@ if(place_meeting(x,y+5,objCollisionPhys) or place_meeting(x,y+5,objMovingPlatfor
 {
 	bOnGround = true;
 	bJumping = false;
+	if iCurrentStamina >=15
+	{
+		bCanSlide = true;
+	}
 } 
 else
 {
 	bOnGround = false;
+	bCanSlide = false;
 }
 
 //Jump only under appropriate conditions for Keyboard
@@ -169,7 +185,7 @@ if(gamepad_button_check(0, gp_face1)) && bUnspaced == true && bOnGround == true 
 }
 
 //display correct sprite while jumping
-if bJumping == true
+if bJumping == true && bAttacking == false
 {
 	if phy_linear_velocity_y <= 0
 		sprite_index = sprJump;
@@ -178,7 +194,7 @@ if bJumping == true
 }
 
 //display correct sprite while falling
-if active == false && phy_linear_velocity_y > 0 && bOnGround == false
+if bGrappling == false && phy_linear_velocity_y > 0 && bOnGround == false && bAttacking == false
 {
 	sprite_index = sprFall;
 }
@@ -202,9 +218,9 @@ if (iCurrentHP <= 0)
 //FACING RIGHT
 if bFacingRight == true
 {
-	image_scale = 1;
+	image_xscale = 1;
 }
 else
 {
-	image_scale = -1;
+	image_xscale = -1;
 }

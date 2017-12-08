@@ -1,7 +1,7 @@
  ///////CREATE\\\\\\\\
 
 // GRAPPLE VARIABLES 
-active = false;
+bGrappling = false;
 iGrappleRadius = 150;
 instNearestGP = objGrappleBlock; 
 //mx = instNearestGP.x; // hook x coordinates
@@ -16,7 +16,7 @@ phy_rotation = 0;
 phy_fixed_rotation = true;
 
 // ATTACK VARIABLES
-attack = false;
+bAttacking = false;
 iAttackTimer = 2;
 alarm[2] = iAttackTimer;
 
@@ -37,6 +37,7 @@ alarm[0] = iDamageBuffer;
 bGotHit = 0;
 
 // SLIDE DASH TIMER 
+bDashing = false;
 //bCanSlide = false;
 //alarm[1] = tStopSlide; 
 
