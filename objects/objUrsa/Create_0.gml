@@ -9,7 +9,7 @@ ursaHP = 50;
 bUrsaDebugMode = 1;
 bContinuePath = 1;
 iUrsaDetectionRadius = 50;
-iUrsaSpeed = -1.1;
+iUrsaSpeed = -1.5;
 
 // Ursa's Damage Variables and Timer
 iUrsaDamage = 1;
