@@ -1,14 +1,14 @@
-
-if(mouse_check_button_pressed(mb_left))
+//ATTACK functionality
+if(mouse_check_button_pressed(mb_left)) && bGrappling == false && bDashing == false
 {
-	bAttackAnim = true;
+	bAttacking = true;
 	sprite_index = sprSwordAtk; 
 	audio_play_sound(sndSlashAttack, 5, false);
-	if image_xscale == 1
+	if bFacingRight
 	{
 		instance_create_layer((x+20),y,"Player",objSwordHitbox);
 	}
-	if image_xscale == -1
+	if bFacingRight == false
 	{
 		instance_create_layer((x-50),y,"Player",objSwordHitbox);
 	}
@@ -17,6 +17,7 @@ else
 {
 	if ceil(image_index) >= image_number
 	{
+		bAttacking = false;
 		sprite_index = sprIdle;
 	}
 }

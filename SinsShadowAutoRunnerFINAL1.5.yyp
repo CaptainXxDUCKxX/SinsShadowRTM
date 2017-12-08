@@ -439,6 +439,14 @@
             }
         },
         {
+            "Key": "8d2b1d0b-87c1-44cb-8cee-bb521b7a171a",
+            "Value": {
+                "id": "af24fa9e-079d-462e-a7dc-3b6e811db4d0",
+                "resourcePath": "sounds\\sndSliceAttack\\sndSliceAttack.yy",
+                "resourceType": "GMSound"
+            }
+        },
+        {
             "Key": "8e1aea5d-fc87-4c80-bf00-2e11026f1670",
             "Value": {
                 "id": "6d793c79-1594-48ce-a44f-f7b7e3a9f526",

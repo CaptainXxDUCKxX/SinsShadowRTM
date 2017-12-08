@@ -169,7 +169,8 @@
         "d43ee2a0-890f-448c-8a59-a7350ae2d4d7",
         "b4ab2dfd-c124-4ca2-8e8b-dbd0881e5a3d",
         "c5371f21-6fb9-4c17-80bd-6a851ef40b0b",
-        "2337a7b3-9ff7-435e-9c37-95bea92c0603"
+        "2337a7b3-9ff7-435e-9c37-95bea92c0603",
+        "cfd9fd6a-5a4d-4003-8a44-63d3f8087ca9"
     ],
     "layers": [
         {
@@ -3313,6 +3314,30 @@
                     "objId": "e49b3581-0a00-4118-9a35-b507c978e4b2",
                     "rotation": 0,
                     "scaleX": 4,
+                    "scaleY": 1
+                },
+                {
+                    "id": "cfd9fd6a-5a4d-4003-8a44-63d3f8087ca9",
+                    "modelName": "GMRInstance",
+                    "mvc": "1.0",
+                    "ignore": false,
+                    "inheritItemSettings": false,
+                    "m_originalParentID": "00000000-0000-0000-0000-000000000000",
+                    "m_serialiseFrozen": false,
+                    "name": "inst_857BA12",
+                    "x": 896,
+                    "y": 480,
+                    "IsDnD": false,
+                    "colour": {
+                        "Value": 4294967295
+                    },
+                    "creationCodeFile": "",
+                    "creationCodeType": "",
+                    "inheritCode": false,
+                    "name_with_no_file_rename": "inst_857BA12",
+                    "objId": "e49b3581-0a00-4118-9a35-b507c978e4b2",
+                    "rotation": 0,
+                    "scaleX": 1,
                     "scaleY": 1
                 }
             ]
@@ -12658,8 +12683,8 @@
                     "m_originalParentID": "00000000-0000-0000-0000-000000000000",
                     "m_serialiseFrozen": false,
                     "name": "inst_498DBBFA",
-                    "x": 896,
-                    "y": 512,
+                    "x": 640,
+                    "y": 416,
                     "IsDnD": false,
                     "colour": {
                         "Value": 4294967295
@@ -12731,7 +12756,7 @@
                     "m_originalParentID": "00000000-0000-0000-0000-000000000000",
                     "m_serialiseFrozen": false,
                     "name": "inst_76B116F8",
-                    "x": 768,
+                    "x": 736,
                     "y": 480,
                     "IsDnD": false,
                     "colour": {
