@@ -20,6 +20,7 @@ tAttackRefresh = 180;
 dirToPlayer = 0;
 iPrevFrameX = 0;
 path_start(pathEnemyBat, iBatSpeed, path_action_restart, 0);
+ 
 
 // Bat's sound effects
 iBatNoiseTimer = random_range(180, 420);

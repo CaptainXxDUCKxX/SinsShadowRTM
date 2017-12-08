@@ -631,6 +631,14 @@
             }
         },
         {
+            "Key": "c2a5c313-b38b-4bd5-8841-2e6be76cd30b",
+            "Value": {
+                "id": "a01dbaf4-8965-4bcd-9be3-8468394e6b1e",
+                "resourcePath": "objects\\objUrsa\\objUrsa.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "c6737a45-0a72-40ec-86d7-cc6747d88c60",
             "Value": {
                 "id": "3c9b0b1f-25ff-4ced-a388-7ab1888bb11e",
