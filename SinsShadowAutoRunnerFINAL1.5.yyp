@@ -471,6 +471,14 @@
             }
         },
         {
+            "Key": "99c67083-1133-4299-9c20-abb46eb750d8",
+            "Value": {
+                "id": "59bed4a7-f3ca-471e-bd9b-ff7ee966f75f",
+                "resourcePath": "sounds\\sndBatAttack\\sndBatAttack.yy",
+                "resourceType": "GMSound"
+            }
+        },
+        {
             "Key": "9a09fd31-e3e7-4b8f-b4e8-6cd80558730c",
             "Value": {
                 "id": "5deaf6a1-62c8-4e06-9c2e-937b4978ba0f",
