@@ -383,6 +383,14 @@
             }
         },
         {
+            "Key": "7b438769-1a4d-41f4-8d74-8f63a0cd0eeb",
+            "Value": {
+                "id": "ba14bf42-61c9-47ad-b61f-ebcf152066cb",
+                "resourcePath": "sprites\\sprHurt\\sprHurt.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "7c7abd99-9576-4717-89df-ea901c95e380",
             "Value": {
                 "id": "3afcf8b6-242c-4747-a65b-6f905836f1c6",
@@ -759,6 +767,14 @@
             }
         },
         {
+            "Key": "dd11cf76-8f35-4e48-a71d-2a6ed97bbc3a",
+            "Value": {
+                "id": "0b2ace9b-f21a-4231-bcb7-4ef75f2f0b9f",
+                "resourcePath": "sprites\\sprSwordFall2\\sprSwordFall2.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "dd763314-caa3-44a0-a32e-149823116217",
             "Value": {
                 "id": "d8c9fc5d-de6d-42bd-9ad0-37b0e7000dc6",
@@ -876,6 +892,22 @@
                 "id": "26bb3ed5-bb1f-4a43-9872-3c0f823215b6",
                 "resourcePath": "objects\\objBat2\\objBat2.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "fb43ed99-379b-4d4b-9be7-eaf4e555e5d3",
+            "Value": {
+                "id": "42b260e9-1bde-4730-a2f8-1d91816ab272",
+                "resourcePath": "sprites\\sprSwordFall\\sprSwordFall.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "fb7f23cf-1653-46ff-a80e-100b52b09bd6",
+            "Value": {
+                "id": "45d1633a-047f-4af6-aacf-ed03dae3e565",
+                "resourcePath": "sprites\\sprSwordJump\\sprSwordJump.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
