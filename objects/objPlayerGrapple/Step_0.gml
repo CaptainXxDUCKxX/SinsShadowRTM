@@ -1,41 +1,11 @@
  /////STEP\\\\\
 
 scrAttack();
+scrGrapple();
+/// The grapple was broken because it was being called here, 
+// I guess..? I deleted it here and called the script, and now 
+// it works. Hooray.
 
-
-
-///// Grapple functionality /////
-// The iGrappleRadius variable seems to be a bit janky. She can grapple when she's near an instance of objGrappleBlock, but she does not grapple the nearest one
-// only the first one
-// it doesn't matter what instance layer the Grapple Point is on, either 
-// Need to figure out why it's only drawing the physics joint rope on that singular objGrappleBlock... 
-// NO ATTACKING WHILE GRAPPLING
-if(keyboard_check_pressed(vk_up)) || (gamepad_button_check_pressed(0, gp_face3)) && (instance_exists(objGrappleBlock)) && (distance_to_object(objGrappleBlock) < iGrappleRadius)
-{
-	bGrappling = true;
-	instNearestGP = instance_nearest(x, y, objGrappleBlock);
-	jointGrapple = physics_joint_rope_create(objPlayerGrapple, instNearestGP, (objPlayerGrapple.x + 9), (objPlayerGrapple.y - 41), instNearestGP.x, instNearestGP.y, 100, true); 
-	bJumping = false;
-	/*
-	if instNearestGP.y < y
-	{
-		mx = instNearestGP.x;
-		my = instNearestGP.y;*/
-	if(distance_to_object(objGrappleBlock) > iGrappleRadius) 
-	{ 
-		bGrappling = false;
-	}
-}
-
-
-if(keyboard_check_released(vk_up)) && (bGrappling == true) || (gamepad_button_check_released(0, gp_face3)) && (bGrappling == true)
-{
-	physics_joint_delete(jointGrapple);
-	bGrappling = false;
-	
-}
-
-/// END GRAPPLY FUNCTION ///
 
 ///// PLAYER MOVEMENT /////
 //if(hspeed == 0) sprite_index = sprIdle;

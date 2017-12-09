@@ -67,7 +67,8 @@ iPrevFrameX = x;
 // physics collision
 if collision_rectangle(bbox_left, bbox_top, bbox_right, bbox_bottom, objPlayerGrapple, false, true) != noone
 {
-
+	
+	audio_play_sound(sndBatAttack, 5, false);
 	//damage logic
 	if (objPlayerGrapple.bCanTakeDamage == 1 && bCanAttack == true)
 		{

@@ -21,7 +21,7 @@ if position_empty((x + 78), (y - 26.5))
 
 //Ursa AI pathing
 
-if iUrsaSpeed > 1
+if iUrsaSpeed > 1 
 {
 	image_xscale = 1;
 	physics_apply_force(x, y, 400, 0);
@@ -29,7 +29,7 @@ if iUrsaSpeed > 1
 	sprite_index = sprUrsaWalk;
 }
 
-if iUrsaSpeed < 1
+if iUrsaSpeed < 1 
 {
 	image_xscale = -1;
 	physics_apply_force(x, y, -400, 0);

@@ -1,7 +1,7 @@
 ///// Grapple functionality /////
 // Grapple Functions perfectly in this code. 
 // There is no reason why this shouldn't work
-if(keyboard_check_pressed(vk_up)) || (gamepad_button_check_pressed(0, gp_face3)) && (instance_exists(objGrappleBlock)) && (distance_to_object(objGrappleBlock) < iGrappleRadius)
+if(keyboard_check_pressed(vk_up)) && (instance_exists(objGrappleBlock)) && (distance_to_object(objGrappleBlock) < iGrappleRadius)
 {
 	bGrappling = true;
 	instNearestGP = instance_nearest(x, y, objGrappleBlock);
@@ -23,6 +23,5 @@ if(keyboard_check_released(vk_up)) && (bGrappling == true) || (gamepad_button_ch
 {
 	physics_joint_delete(jointGrapple);
 	bGrappling = false;
-	
 }
 
