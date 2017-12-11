@@ -5,7 +5,7 @@
     "name": "objRope",
     "eventList": [
         {
-            "id": "c1b47a67-5859-461b-9172-afde949036c6",
+            "id": "bb7da039-219a-44ff-843e-fd39eda77964",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,
@@ -30,28 +30,28 @@
     "physicsShape": 1,
     "physicsShapePoints": [
         {
-            "id": "79020cc0-6973-451a-8e70-2d14c49b4e1a",
+            "id": "a1142b7d-0be5-403b-84a3-28f6e4615c70",
             "modelName": "GMPoint",
             "mvc": "1.0",
             "x": 23,
             "y": 0
         },
         {
-            "id": "a08ca892-809f-48c5-8314-bea802dac011",
+            "id": "20b6c113-240c-40bb-9c1b-458030534aa8",
             "modelName": "GMPoint",
             "mvc": "1.0",
             "x": 41,
             "y": 0
         },
         {
-            "id": "80450782-8d9e-4bc2-99eb-6a908ceb6e58",
+            "id": "f0a3bfa0-1d6b-4834-9292-c169db58f023",
             "modelName": "GMPoint",
             "mvc": "1.0",
             "x": 41,
             "y": 64
         },
         {
-            "id": "f39838ff-ab57-486d-bd32-c9469a3baf16",
+            "id": "cc56cd47-4a64-48ec-93e9-ed1c5db80272",
             "modelName": "GMPoint",
             "mvc": "1.0",
             "x": 23,
@@ -60,6 +60,6 @@
     ],
     "physicsStartAwake": true,
     "solid": false,
-    "spriteId": "381784db-7a30-4617-96f2-f121e8421c96",
+    "spriteId": "855604c7-f988-4513-b052-f6d95b02668d",
     "visible": true
 }
