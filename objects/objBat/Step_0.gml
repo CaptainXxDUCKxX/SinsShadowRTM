@@ -1,7 +1,12 @@
 //Bat AI pathing
+iBatXRetreatLeft = objPlayerGrapple.x - 300;
+iBatXRetreatRight = objPlayerGrapple.x + 300;
+iBatYRetreat = objPlayerGrapple.y - 80;
+
+
 if instance_exists(objPlayerGrapple)
 	{
-	if (distance_to_object(objPlayerGrapple) < iBatDetectionRadius && bCanAttack == true)
+	if (distance_to_object(objPlayerGrapple) < iBatDetectionRadius && bCanAttack == true && objPlayerGrapple.bCanTakeDamage == true)
 		{
 		bContinuePath = 0;
 		path_end();
@@ -11,17 +16,35 @@ if instance_exists(objPlayerGrapple)
 		}
 	else if bContinuePath == 0
 		{
-		bContinuePath = 1;
-		path_start(pathEnemyBat, iBatSpeed, path_action_continue, 0);
+			if(bRetreatPointPicked == false)
+			{
+				iBatRetreatChosenX = choose(iBatXRetreatLeft, iBatXRetreatRight);
+				iBatRetreatChosenY = iBatYRetreat; 
+				bRetreatPointPicked = true;
+			}
+			if(distance_to_point(iBatRetreatChosenX, iBatRetreatChosenY) <= 5)
+			{
+				bContinuePath = 1;
+				path_start(pathEnemyBat, iBatSpeed, path_action_continue, 0);
+			}
+			else
+			{
+				iDirToRetreat = point_direction(x,y,iBatRetreatChosenX, iBatRetreatChosenY);
+				x += lengthdir_x(2,iDirToRetreat);
+				y += lengthdir_y(2,iDirToRetreat);
+			}
 		}
 	}
 
 //Bat sound
-iBatNoiseTimer -= 1;
-if iBatNoiseTimer <= 0
+tBatNoise -= 1;
+if (distance_to_object(objPlayerGrapple) <= iBatNoiseRadius)
 {
-iBatNoiseTimer = random_range(180, 420);
-audio_play_sound(sndBatNoise, 10, false);
+	if tBatNoise <= 0
+	{
+		tBatNoise = random_range(180, 420);
+		audio_play_sound(sndBatNoise, 10, false);
+	}
 }
 
 //Timer countdown
@@ -50,6 +73,11 @@ if (hit != noone)
 	{
 	//hit.batHP -= 1; BREAKING GAME
 	audio_play_sound(sndSliceAttack, 5, false);
+	lootDrop = random(100)
+	if(lootDrop >= 70)
+	{
+		instance_create_layer(x,y,"Player",objHealthPickUp);
+	}
 	instance_destroy ();
 	}
 	
@@ -68,18 +96,18 @@ iPrevFrameX = x;
 if collision_rectangle(bbox_left, bbox_top, bbox_right, bbox_bottom, objPlayerGrapple, false, true) != noone
 {
 	
-	audio_play_sound(sndBatAttack, 5, false);
+	
 	//damage logic
 	if (objPlayerGrapple.bCanTakeDamage == 1 && bCanAttack == true)
 		{
-			objPlayerGrapple.iCurrentHP -= iBatDamage;			
+			audio_play_sound(sndBatAttack, 5, false);
+			objPlayerGrapple.iCurrentHP -= iBatDamage;				
 			objPlayerGrapple.bCanTakeDamage = 0;
-			objPlayerGrapple.bGotHit = 1;			
+			objPlayerGrapple.tDmgBuffer = 180;
+			objPlayerGrapple.bGotHit = 1;
+			bCanAttack = false;			
 		}
 
-	bCanAttack = false;
-//Debug
-objPlayerGrapple.iCurrentHP -= iBatDamage;
 }
 
 
