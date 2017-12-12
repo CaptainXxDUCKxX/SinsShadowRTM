@@ -29,7 +29,8 @@ iCurrentStamina = 100;
 iMaxStamina = 100;
 
 // TAKE DAMAGE
-bCanTakeDamage = 0;
+tDmgBuffer = 180;
+bCanTakeDamage = false;
 iDamageBuffer = 60;
 alarm[0] = iDamageBuffer;
 bGotHit = 0;

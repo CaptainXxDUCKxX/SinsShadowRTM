@@ -439,6 +439,14 @@
             }
         },
         {
+            "Key": "855604c7-f988-4513-b052-f6d95b02668d",
+            "Value": {
+                "id": "53d6e7b8-0411-47bb-9b89-3bc01fa4bc7e",
+                "resourcePath": "sprites\\sprSwordLinks\\sprSwordLinks.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "86ba473d-1c30-448e-8904-f0b04fdaa670",
             "Value": {
                 "id": "93f4c8a4-0725-43e8-bda5-309f1c0b5e1c",
@@ -497,7 +505,7 @@
         {
             "Key": "9aa035b9-ea7d-4e59-9a06-1541a7ad1412",
             "Value": {
-                "id": "cd3d8a4e-979e-454c-9708-f57de00ad586",
+                "id": "0687e019-d62a-4a9a-bbf4-b651077dd239",
                 "resourcePath": "objects\\objRope\\objRope.yy",
                 "resourceType": "GMObject"
             }

@@ -194,3 +194,11 @@ else
 {
 	image_xscale = -1;
 }
+
+
+//DAMAGE BUFFER
+tDmgBuffer -= 1;
+if(tDmgBuffer <= 0)
+{
+	bCanTakeDamage = true;
+}
