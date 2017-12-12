@@ -106,16 +106,10 @@ if (objPlayerGrapple.y >= 1200)
 
 if (iCurrentHP <= 0) 
 {
-	tDeathBuffer -= 1;
 	effect_create_above(ef_firework, x, y-1, 0.3, c_red);
 	instance_destroy(objPlayerGrapple);
-	//room_goto(rmDeathScreen); /// moved this to the DeathBuffer if statement 
-} 
-
-if(tDeathBuffer <= 0)
-{
 	room_goto(rmDeathScreen);
-}
+} 
 
 //FACING RIGHT
 if bFacingRight == true

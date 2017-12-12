@@ -183,14 +183,6 @@
             }
         },
         {
-            "Key": "381784db-7a30-4617-96f2-f121e8421c96",
-            "Value": {
-                "id": "53877514-c5e9-489f-8179-dedb42243dbd",
-                "resourcePath": "sprites\\sprRope\\sprRope.yy",
-                "resourceType": "GMSprite"
-            }
-        },
-        {
             "Key": "3c65baba-ef75-4ac5-a830-b039d53beb90",
             "Value": {
                 "id": "587c9b9a-7c3b-4ae4-895e-63d9c1315e4c",
