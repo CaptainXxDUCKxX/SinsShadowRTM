@@ -35,6 +35,10 @@ iDamageBuffer = 60;
 alarm[0] = iDamageBuffer;
 bGotHit = 0;
 
+
+// DEATH BUFFER 
+tDeathBuffer = 180;
+
 // SLIDE DASH TIMER 
 bDashing = false;
 //bCanSlide = false;

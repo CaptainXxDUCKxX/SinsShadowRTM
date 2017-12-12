@@ -11,8 +11,11 @@ bUrsaMoveRight = false;
 
 // Ursa's Damage Variables and Timer
 iUrsaDamage = 10;
-bCanAttack = true;
+bCanAttack = false;
+bAttacking = false;
+bInRange = false;
 tAttackRefresh = 180;
+bCanSee = false;
 
 // Ursa's Direction...?
 dirToPlayer = 0;
