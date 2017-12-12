@@ -3,11 +3,10 @@
 scrAttack();
 scrGrapple();
 scrPlayerMovement();
-
 /// The grapple was broken because it was being called here, 
 // I guess..? I deleted it here and called the script, and now 
 // it works. Hooray.
-  	     
+	     
 /// SLIDE DASH/DODGE CODE ///
 
 //She can apply the force in the air for some reason.
@@ -128,3 +127,4 @@ if(tDmgBuffer <= 0)
 {
 	bCanTakeDamage = true;
 }
+
