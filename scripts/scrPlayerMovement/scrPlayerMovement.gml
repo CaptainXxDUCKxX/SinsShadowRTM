@@ -50,26 +50,9 @@ if(keyboard_check(ord("A"))) || (gamepad_button_check(0, gp_padl)) || (gamepad_a
 	*/
 }
 
-/*
-	if(hspeed == 0) sprite_index = sprHang;
-	else sprite_index = sprHang;
-	
-	if objPlayerGrapple.x < objGrappleBlock.x
-	{
-		physics_apply_force(x, y, 250, 0);
-	}
-	
-	if objPlayerGrapple.x > objGrappleBlock.x 
-	{
-		physics_apply_force(x, y, -250, 0);
-	}
-	
-}
-*/
-
-if(!keyboard_check(ord("A"))) && !keyboard_check(ord("D")) 
+if(!keyboard_check(ord("A"))) && !keyboard_check(ord("D"))
 {
-	if(bOnGround == true)
+	if(bOnGround == true) && (bAttacking == false)
 	{
 		hspeed = 0;
 		sprite_index = sprIdle;
@@ -80,7 +63,6 @@ if(!keyboard_check(ord("A"))) && !keyboard_check(ord("D"))
 		sprite_index = sprHang;
 	}
 }
-
 
 /*
 if position_meeting(x,y, objMovingPlatformPhys) 
