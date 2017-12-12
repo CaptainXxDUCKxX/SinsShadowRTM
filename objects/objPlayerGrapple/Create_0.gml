@@ -45,6 +45,7 @@ bUnspaced = true; //is the spacebar being held down
 bOnGround = false; //is Amelia on the ground
 bJumpImpulseSwitch = true; //"true" meaning "can jump"
 bJumping = false;
+bAtJumpApex = false;
 
 //physics collision
 phys_x = phy_position_x

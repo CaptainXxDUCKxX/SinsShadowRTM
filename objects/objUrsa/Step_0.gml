@@ -38,11 +38,11 @@ if bUrsaMoveRight == false && bCanAttack == true
 {
 	if collision_line((x - 40), (y - 27), (x - 256), (y - 27), objPlayerGrapple, false, true) > 0
 	{
-		show_debug_message("Rawr.");
+		//show_debug_message("Rawr.");
 	}
 	else
 	{
-		show_debug_message("...");
+		//show_debug_message("...");
 	}
 }
 else if bUrsaMoveRight == true && bCanAttack == true
@@ -50,10 +50,10 @@ else if bUrsaMoveRight == true && bCanAttack == true
 	
 	if collision_line((x + 40), (y - 27), (x + 256), (y - 27), objPlayerGrapple, false, true) > 0
 	{
-		show_debug_message("Rawr.");
+		//show_debug_message("Rawr.");
 	}
 	else
 	{
-		show_debug_message("...");
+		//show_debug_message("...");
 	}
 }

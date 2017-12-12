@@ -69,7 +69,7 @@ if(keyboard_check(ord("A"))) || (gamepad_button_check(0, gp_padl)) || (gamepad_a
 
 if(!keyboard_check(ord("A"))) && !keyboard_check(ord("D")) 
 {
-	if(bOnGround == true)
+	if(bOnGround == true && bAttacking == false)
 	{
 		hspeed = 0;
 		sprite_index = sprIdle;
