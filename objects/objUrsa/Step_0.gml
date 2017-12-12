@@ -1,66 +1,59 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-if !position_empty((x - 78), (y - 26.5))
+///Ursa AI pathing
+//Turn Ursa away from walls and gaps
+if collision_point((x - 78), (y - 26.5), objCollisionPhys, false, true) || !collision_point((x - 100), (y + 15), objCollisionPhys, false, true)
 {
-	//show_debug_message("Collision");
+	bUrsaMoveRight = true;
 }
-if position_empty((x - 78), (y - 26.5))
+if collision_point((x + 78), (y - 26.5), objCollisionPhys, false, true) || !collision_point((x + 100), (y + 15), objCollisionPhys, false, true)
 {
-	//show_debug_message("No collision");
-}
-
-if !position_empty((x + 78), (y - 26.5))
-{
-	show_debug_message("Collision");
-}
-if position_empty((x + 78), (y - 26.5))
-{
-	show_debug_message("No collision");
+	bUrsaMoveRight = false;
 }
 
-//Ursa AI pathing
-
-if iUrsaSpeed > 1 
+//Make Ursa walk and face the direction she is facing
+if bUrsaMoveRight == true 
 {
 	image_xscale = 1;
-	physics_apply_force(x, y, 400, 0);
-	hspeed = 1.5;
+	physics_apply_force(x, y, 675, 0);
 	sprite_index = sprUrsaWalk;
 }
-
-if iUrsaSpeed < 1 
+if bUrsaMoveRight == false 
 {
 	image_xscale = -1;
-	physics_apply_force(x, y, -400, 0);
-	hspeed = -5;
+	physics_apply_force(x, y, -675, 0);
 	sprite_index = sprUrsaWalk;
 }
 
-
-//Timer countdown
-if bCanAttack == false
-	{                     
-		tAttackRefresh -= 1;
-	}
-	
-//Attack refresh
+///Ursa Attacking
+//Attack refresh timer
+tAttackRefresh -= 1;
 if tAttackRefresh <= 0
 	{
-		sprite_index = sprUrsaAttack
 		bCanAttack = true;
 		tAttackRefresh = 180;
 	}
-
-
-
-//This makese the Ursa flip when it switches it's position.	
-if (x < iPrevFrameX)
+if bUrsaMoveRight == false && bCanAttack == true
+{
+	if collision_line((x - 40), (y - 27), (x - 256), (y - 27), objPlayerGrapple, false, true) > 0
 	{
-	image_xscale = -1;
+		show_debug_message("Rawr.");
 	}
-else if (x > iPrevFrameX)
+	else
 	{
-	image_xscale = 1;
+		show_debug_message("...");
 	}
-iPrevFrameX = x;
+}
+else if bUrsaMoveRight == true && bCanAttack == true
+{
+	
+	if collision_line((x + 40), (y - 27), (x + 256), (y - 27), objPlayerGrapple, false, true) > 0
+	{
+		show_debug_message("Rawr.");
+	}
+	else
+	{
+		show_debug_message("...");
+	}
+}

@@ -7,12 +7,10 @@ ursaHP = 50;
 
 // Ursa's Pathing && Speed
 bUrsaDebugMode = 1;
-bContinuePath = 1;
-iUrsaDetectionRadius = 50;
-iUrsaSpeed = -1.5;
+bUrsaMoveRight = false;
 
 // Ursa's Damage Variables and Timer
-iUrsaDamage = 1;
+iUrsaDamage = 10;
 bCanAttack = true;
 tAttackRefresh = 180;
 
