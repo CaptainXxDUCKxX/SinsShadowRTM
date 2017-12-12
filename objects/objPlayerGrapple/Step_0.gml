@@ -45,7 +45,7 @@ if(keyboard_check_released(vk_space)) || (gamepad_button_check_released(0, gp_fa
 }
 
 //Check to see if player is on the ground
-if(place_meeting(x,y+5,objCollisionPhys) or place_meeting(x,y+5,objMovingPlatformPhys))
+if(place_meeting(x,y+5,objCollisionPhys) or place_meeting(x,y+5,objMovingPlatformPhys)) or place_meeting(x, y+5, objCollisionPhysLOWHALF)
 {
 	bOnGround = true;
 	bJumping = false;
@@ -65,7 +65,6 @@ if(keyboard_check(vk_space)) && bUnspaced == true && bOnGround == true && iCurre
 {
 	bUnspaced = false;
 	physics_apply_impulse(x, y, 0, -220);
-	iCurrentStamina -= 15;
 	bJumping = true;
 }
 
@@ -74,7 +73,6 @@ if(gamepad_button_check(0, gp_face1)) && bUnspaced == true && bOnGround == true 
 {
 	bUnspaced = false;
 	physics_apply_impulse(x, y, 0, -220);
-	iCurrentStamina -= 15;
 	bJumping = true;
 }
 
@@ -100,14 +98,24 @@ phys_x = phy_position_x
 phys_y = phy_position_y
 
 /// DEATH ///
-if (objPlayerGrapple.y >= 1200) iCurrentHP = 0; 
+if (objPlayerGrapple.y >= 1200) 
+{
+	iCurrentHP = 0; 
+	tDeathBuffer -= 1; 
+}
 
 if (iCurrentHP <= 0) 
 {
+	tDeathBuffer -= 1;
+	effect_create_above(ef_firework, x, y-1, 0.3, c_red);
 	instance_destroy(objPlayerGrapple);
-	room_goto(rmDeathScreen);
+	//room_goto(rmDeathScreen); /// moved this to the DeathBuffer if statement 
 } 
 
+if(tDeathBuffer <= 0)
+{
+	room_goto(rmDeathScreen);
+}
 
 //FACING RIGHT
 if bFacingRight == true
