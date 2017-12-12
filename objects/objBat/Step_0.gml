@@ -64,6 +64,7 @@ if tAttackRefresh <= 0
 //Bat taking damage and dying
 if(batHP <=0)
 	{					   
+		
 		instance_destroy();  
 	} 
 
@@ -78,10 +79,11 @@ if (hit != noone)
 	{
 		instance_create_layer(x,y,"Player",objHealthPickUp);
 	}
+	effect_create_above(ef_explosion, x, y-1, 0.3, c_purple);
 	instance_destroy ();
 	}
 	
-//This makese the Bat flip when it switches it's position.	
+// This makese the Bat flip when it switches it's position // 
 if (x < iPrevFrameX)
 	{
 	image_xscale = 1;
@@ -105,6 +107,7 @@ if collision_rectangle(bbox_left, bbox_top, bbox_right, bbox_bottom, objPlayerGr
 			objPlayerGrapple.bCanTakeDamage = 0;
 			objPlayerGrapple.tDmgBuffer = 180;
 			objPlayerGrapple.bGotHit = 1;
+			effect_create_below(ef_firework, x, y-1, 0.1, c_red);
 			bCanAttack = false;			
 		}
 

@@ -125,3 +125,4 @@ if(tDmgBuffer <= 0)
 {
 	bCanTakeDamage = true;
 }
+
