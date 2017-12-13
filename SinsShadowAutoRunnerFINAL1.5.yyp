@@ -199,6 +199,14 @@
             }
         },
         {
+            "Key": "409a443d-08a6-4a7a-a2e2-5d87d326fbc9",
+            "Value": {
+                "id": "b12755fc-a8c5-47d4-a08e-77d447f66ccd",
+                "resourcePath": "sprites\\sprGrappleFall\\sprGrappleFall.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "4282c312-0d7d-4f2b-806b-dd76b6211c7f",
             "Value": {
                 "id": "d8e930c6-5db3-4e00-baf5-7b181f734c51",
@@ -759,6 +767,14 @@
             }
         },
         {
+            "Key": "d7fdef55-5a9e-42ea-8b32-964fe00fe123",
+            "Value": {
+                "id": "dd53281e-64ed-47f2-a824-589cfc89836b",
+                "resourcePath": "sprites\\sprGrappleFall2\\sprGrappleFall2.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "da96d3e0-816e-48f1-b130-bc920e056ba4",
             "Value": {
                 "id": "8e41bf77-ed90-4c99-bdfd-21273e406a95",
@@ -940,6 +956,14 @@
                 "id": "3ce084e5-0838-429c-8554-2dad8f164290",
                 "resourcePath": "objects\\objGrappleBlock\\objGrappleBlock.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "fda92f10-39fd-4084-b069-4868a3a5fe4c",
+            "Value": {
+                "id": "4c3a62d8-f992-4db6-adf3-eaa5ff0124e6",
+                "resourcePath": "sprites\\sprGrappleJump\\sprGrappleJump.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
