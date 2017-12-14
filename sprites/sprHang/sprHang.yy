@@ -35,10 +35,54 @@
                     "LayerId": "f44266d2-fbe3-476d-b509-dc5614f8234c"
                 }
             ]
+        },
+        {
+            "id": "66bd943b-c041-488c-89ed-518dc9c1d48f",
+            "modelName": "GMSpriteFrame",
+            "mvc": "1.0",
+            "SpriteId": "62dae915-53da-4586-acb9-e7d87058c240",
+            "compositeImage": {
+                "id": "211e6eb5-c9c3-4684-b060-871599bcffdd",
+                "modelName": "GMSpriteImage",
+                "mvc": "1.0",
+                "FrameId": "66bd943b-c041-488c-89ed-518dc9c1d48f",
+                "LayerId": "00000000-0000-0000-0000-000000000000"
+            },
+            "images": [
+                {
+                    "id": "a4f05db8-01ee-4f06-a2b0-e2303e52fbc1",
+                    "modelName": "GMSpriteImage",
+                    "mvc": "1.0",
+                    "FrameId": "66bd943b-c041-488c-89ed-518dc9c1d48f",
+                    "LayerId": "f44266d2-fbe3-476d-b509-dc5614f8234c"
+                }
+            ]
+        },
+        {
+            "id": "43f109e0-498e-48ae-a7f3-debbd45faf40",
+            "modelName": "GMSpriteFrame",
+            "mvc": "1.0",
+            "SpriteId": "62dae915-53da-4586-acb9-e7d87058c240",
+            "compositeImage": {
+                "id": "3e34456c-f08a-4016-9c31-7730550be86b",
+                "modelName": "GMSpriteImage",
+                "mvc": "1.0",
+                "FrameId": "43f109e0-498e-48ae-a7f3-debbd45faf40",
+                "LayerId": "00000000-0000-0000-0000-000000000000"
+            },
+            "images": [
+                {
+                    "id": "f4ff513e-057b-4e0f-b3b4-77610d41e3e6",
+                    "modelName": "GMSpriteImage",
+                    "mvc": "1.0",
+                    "FrameId": "43f109e0-498e-48ae-a7f3-debbd45faf40",
+                    "LayerId": "f44266d2-fbe3-476d-b509-dc5614f8234c"
+                }
+            ]
         }
     ],
-    "gridX": 0,
-    "gridY": 0,
+    "gridX": 1,
+    "gridY": 1,
     "height": 83,
     "layers": [
         {
@@ -54,7 +98,7 @@
         }
     ],
     "origin": 9,
-    "playbackSpeed": 15,
+    "playbackSpeed": 5,
     "playbackSpeedType": 0,
     "sepmasks": false,
     "swatchColours": null,

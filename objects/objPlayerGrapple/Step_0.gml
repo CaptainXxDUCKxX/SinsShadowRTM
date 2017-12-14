@@ -3,11 +3,10 @@
 scrAttack();
 scrGrapple();
 scrPlayerMovement();
-
 /// The grapple was broken because it was being called here, 
 // I guess..? I deleted it here and called the script, and now 
 // it works. Hooray.
-  	     
+	     
 /// SLIDE DASH/DODGE CODE ///
 
 //She can apply the force in the air for some reason.
@@ -45,7 +44,7 @@ if(keyboard_check_released(vk_space)) || (gamepad_button_check_released(0, gp_fa
 }
 
 //Check to see if player is on the ground
-if(place_meeting(x,y+5,objCollisionPhys) or place_meeting(x,y+5,objMovingPlatformPhys))
+if(place_meeting(x,y+5,objCollisionPhys) or place_meeting(x,y+5,objMovingPlatformPhys)) or place_meeting(x, y+5, objCollisionPhysLOWHALF)
 {
 	bOnGround = true;
 	bJumping = false;
@@ -98,14 +97,18 @@ phys_x = phy_position_x
 phys_y = phy_position_y
 
 /// DEATH ///
-if (objPlayerGrapple.y >= 1200) iCurrentHP = 0; 
+if (objPlayerGrapple.y >= 1200) 
+{
+	iCurrentHP = 0; 
+	tDeathBuffer -= 1; 
+}
 
 if (iCurrentHP <= 0) 
 {
+	effect_create_above(ef_firework, x, y-1, 0.3, c_red);
 	instance_destroy(objPlayerGrapple);
 	room_goto(rmDeathScreen);
 } 
-
 
 //FACING RIGHT
 if bFacingRight == true
@@ -124,3 +127,4 @@ if(tDmgBuffer <= 0)
 {
 	bCanTakeDamage = true;
 }
+

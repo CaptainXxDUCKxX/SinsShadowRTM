@@ -35,6 +35,10 @@ iDamageBuffer = 60;
 alarm[0] = iDamageBuffer;
 bGotHit = 0;
 
+
+// DEATH BUFFER 
+tDeathBuffer = 180;
+
 // SLIDE DASH TIMER 
 bDashing = false;
 //bCanSlide = false;
@@ -45,6 +49,7 @@ bUnspaced = true; //is the spacebar being held down
 bOnGround = false; //is Amelia on the ground
 bJumpImpulseSwitch = true; //"true" meaning "can jump"
 bJumping = false;
+bAtJumpApex = false;
 
 //physics collision
 phys_x = phy_position_x

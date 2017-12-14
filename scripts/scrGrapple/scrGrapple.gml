@@ -1,6 +1,8 @@
 ///// Grapple functionality /////
 // Grapple Functions perfectly in this code. 
 // There is no reason why this shouldn't work
+
+// these variables are for the Chain Link
 offset_y = 0;
 next_rope = instance_create_layer(x, y, "Player", objRope);
 
@@ -34,12 +36,40 @@ if(keyboard_check_released(vk_up)) && (bGrappling == true) || (gamepad_button_ch
 
 /// It seems to be centering her to the left of the GrappleBlock; where the pendulum begins 
 // Not too sure how to fix that, exactly; at least not in a logical way...
+
+
+/// MORE ACCURATE GRAPPLING /// 
+
+/// Okay, I kind of have a closer grip on the accurate grapple functionality
+// needs more refining; it's wonky, but not TERRIBLE
+// not that great, but kinda cool
+
 if(bGrappling == true) && objPlayerGrapple.x < instNearestGP.x
 {	
-	physics_apply_force(x, y, 250, 0);
+	physics_apply_force(x, y, 350, 0);
+	if(bGrappling == true) && objPlayerGrapple.x < instNearestGP.x && keyboard_check(ord("D"))
+	{
+		physics_apply_force(x, y, 370, 0);
+	}
 }
 
 if(bGrappling == true) && objPlayerGrapple.x > instNearestGP.x
 {
-	physics_apply_force(x, y, -250, 0);
+	physics_apply_force(x, y, -350, 0);
+	if(bGrappling == true) && objPlayerGrapple.x > instNearestGP.x && keyboard_check(ord("A"))
+	{
+		physics_apply_force(x, y, -370, 0);
+	}
+}	
+/// END ACCURATE GRAPPLING /// 
+
+/// GRAPPLING TAKES STAMINA /// 
+if(bGrappling == true)
+{
+	iCurrentStamina -= 0.5;
+	if(iCurrentStamina <= 0)
+	{
+		bGrappling = false;
+		physics_joint_delete(jointGrapple);
+	}
 }

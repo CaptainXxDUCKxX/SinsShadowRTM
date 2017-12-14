@@ -107,6 +107,7 @@ if collision_rectangle(bbox_left, bbox_top, bbox_right, bbox_bottom, objPlayerGr
 			objPlayerGrapple.bCanTakeDamage = 0;
 			objPlayerGrapple.tDmgBuffer = 180;
 			objPlayerGrapple.bGotHit = 1;
+			effect_create_below(ef_firework, x, y-1, 0.1, c_red);
 			bCanAttack = false;			
 		}
 
