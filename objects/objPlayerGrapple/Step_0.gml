@@ -61,20 +61,18 @@ else
 }
 
 //Jump only under appropriate conditions for Keyboard
-if(keyboard_check(vk_space)) && bUnspaced == true && bOnGround == true && iCurrentStamina > 14
+if(keyboard_check(vk_space)) && bUnspaced == true && bOnGround == true
 {
 	bUnspaced = false;
 	physics_apply_impulse(x, y, 0, -220);
-	iCurrentStamina -= 15;
 	bJumping = true;
 }
 
 //Jump only under appropriate conditions for Controller
-if(gamepad_button_check(0, gp_face1)) && bUnspaced == true && bOnGround == true && iCurrentStamina > 14
+if(gamepad_button_check(0, gp_face1)) && bUnspaced == true && bOnGround == true
 {
 	bUnspaced = false;
 	physics_apply_impulse(x, y, 0, -220);
-	iCurrentStamina -= 15;
 	bJumping = true;
 }
 

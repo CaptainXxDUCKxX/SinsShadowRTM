@@ -77,8 +77,32 @@ if sprite_index == sprUrsaAttack && image_index > 5.5
 	sprite_index = sprUrsaWalk;
 }
 
+/*
 //debug
 if sprite_index == sprUrsaAttack
 {
 	show_debug_message(image_index);
 }
+*/
+
+//Bat taking damage and dying
+if(ursaHP <=0)
+	{					   
+		
+		instance_destroy();  
+	} 
+
+hit = instance_place (x, y, objSwordHitbox);
+
+if (hit != noone)
+	{
+	//hit.batHP -= 1; BREAKING GAME
+	audio_play_sound(sndSliceAttack, 5, false);
+	lootDrop = random(100)
+	if(lootDrop >= 70)
+	{
+		instance_create_layer(x,y,"Player",objHealthPickUp);
+	}
+	effect_create_above(ef_explosion, x, y-1, 0.3, c_purple);
+	instance_destroy ();
+	}
