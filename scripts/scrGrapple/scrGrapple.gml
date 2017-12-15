@@ -8,12 +8,11 @@
 if(keyboard_check_pressed(vk_up)) && (instance_exists(objGrappleBlock)) && (distance_to_object(objGrappleBlock) < iGrappleRadius)
 {
 	bGrappling = true;
-	instance_create_layer(x+9, y-41, "Player", objRope);
+	instance_create_layer(x+9, y-45, "Player", objLink);
 	instNearestGP = instance_nearest(x, y, objGrappleBlock);
 	jointGrapple = physics_joint_rope_create(objPlayerGrapple, instNearestGP, (objPlayerGrapple.x + 9), (objPlayerGrapple.y - 41), instNearestGP.x, instNearestGP.y, 100, true); 
 	bJumping = false;
 }
-
 
 if(keyboard_check_released(vk_up)) && (bGrappling == true) || (gamepad_button_check_released(0, gp_face3)) && (bGrappling == true)
 {
@@ -25,7 +24,7 @@ if(keyboard_check_released(vk_up)) && (bGrappling == true) || (gamepad_button_ch
 
 if(bGrappling)
 {
-	
+	instance
 }
 
 /// ACCURATE GRAPPLING /// 
