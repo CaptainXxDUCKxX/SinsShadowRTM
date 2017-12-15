@@ -85,7 +85,7 @@ if sprite_index == sprUrsaAttack
 }
 */
 
-//Bat taking damage and dying
+//Ursa taking damage and dying
 if(ursaHP <=0)
 	{					   
 		
@@ -96,13 +96,12 @@ hit = instance_place (x, y, objSwordHitbox);
 
 if (hit != noone)
 	{
-	//hit.batHP -= 1; BREAKING GAME
 	audio_play_sound(sndSliceAttack, 5, false);
 	lootDrop = random(100)
 	if(lootDrop >= 70)
 	{
-		instance_create_layer(x,y,"Player",objHealthPickUp);
+		instance_create_layer(x,y,"Player",objBigAssHealthPickUp);
 	}
-	effect_create_above(ef_explosion, x, y-1, 0.3, c_purple);
+	effect_create_above(ef_ellipse, x, y-1, 2, c_dkgray);
 	instance_destroy ();
 	}

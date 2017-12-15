@@ -3,14 +3,14 @@ hit = 0;
 hspeed = 0;
 vspeed = 0; 
 
-ursaHP = 50; 
+ursaHP = 500; 
 
 // Ursa's Pathing && Speed
 bUrsaDebugMode = 1;
 bUrsaMoveRight = false;
 
 // Ursa's Damage Variables and Timer
-iUrsaDamage = 50;
+iUrsaDamage = 25;
 bCanAttack = false;
 bAttacking = false;
 bInRange = false;
