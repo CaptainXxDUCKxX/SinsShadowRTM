@@ -57,7 +57,3 @@ phys_y = phy_position_y
 
 //Facing right
 bFacingRight = true;
-
-//TIMEOUT ANIMATION
-bDoingNothing = false;
-alarm [3] = (room_speed * 3); 
