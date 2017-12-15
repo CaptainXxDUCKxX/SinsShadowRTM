@@ -2,6 +2,7 @@
 
 draw_self(); 
 
+
 if(bGrappling)
 {
 	/// Maybe this doesn't work in the draw event... 
