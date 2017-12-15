@@ -17,7 +17,7 @@ if keyboard_check(vk_down) || (gamepad_button_check(0, gp_shoulderr)) && keyboar
 	bDashing = true;
 	bUnspaced = true;
 	iCurrentStamina -= 0.25; 
-	physics_apply_force(x,y,1000,0);
+	physics_apply_impulse(x,y,220,0);
 	sprite_index = sprSlide;
 }
 if keyboard_check(vk_down) || (gamepad_button_check(0, gp_shoulderr)) && keyboard_check(ord("A")) && iCurrentStamina > 14 && bCanSlide == true
@@ -25,7 +25,7 @@ if keyboard_check(vk_down) || (gamepad_button_check(0, gp_shoulderr)) && keyboar
 	bDashing = true;
 	bUnspaced = true;
 	iCurrentStamina -= 0.25; 
-	physics_apply_force(x,y,-1000,0);
+	physics_apply_impulse(x,y,-220,0);
 	sprite_index = sprSlide;
 }
 if keyboard_check_released(vk_down)
@@ -128,3 +128,10 @@ if(tDmgBuffer <= 0)
 	bCanTakeDamage = true;
 }
 
+//TIMEOUT ANIMATION
+
+if (hspeed == 0 && vspeed == 0 && alarm [3] = -1)
+{
+	bDoingNothing = true;
+	alarm [3] = (room_speed * 3);
+}
