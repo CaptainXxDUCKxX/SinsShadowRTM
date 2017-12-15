@@ -99,11 +99,3 @@ if(tDmgBuffer <= 0)
 {
 	bCanTakeDamage = true;
 }
-
-//TIMEOUT ANIMATION
-
-if (hspeed == 0 && vspeed == 0 && alarm [3] = -1)
-{
-	bDoingNothing = true;
-	alarm [3] = (room_speed * 3);
-}
