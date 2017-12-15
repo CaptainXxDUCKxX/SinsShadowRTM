@@ -21,11 +21,12 @@ if(keyboard_check_released(vk_up)) && (bGrappling == true) || (gamepad_button_ch
 }
 
 /// GRAPPLE LINKS OBJECT ///
-
+/*
 if(bGrappling)
 {
-	//instance
+	instGP2 = instance_create_layer(x+10, y-25, "Player", objGP2);
 }
+*/
 
 /// ACCURATE GRAPPLING /// 
 
