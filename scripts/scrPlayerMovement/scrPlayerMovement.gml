@@ -82,6 +82,7 @@ if(!keyboard_check(ord("A"))) && !keyboard_check(ord("D"))
 }
 
 
+
 /*
 if position_meeting(x,y, objMovingPlatformPhys) 
   {
