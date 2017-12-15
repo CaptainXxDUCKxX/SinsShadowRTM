@@ -3,7 +3,7 @@ if !bJumping
 {
 	bAtJumpApex = false;
 }
-if(keyboard_check_pressed(ord("R"))) && !bGrappling && !bDashing
+if(keyboard_check_pressed(vk_left)) && !bGrappling && !bDashing
 {
 	bAttacking = true;
 	audio_play_sound(sndSlashAttack, 5, false);
