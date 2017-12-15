@@ -72,7 +72,7 @@ if(!keyboard_check(ord("A"))) && !keyboard_check(ord("D"))
 	if(bOnGround == true && bAttacking == false)
 	{
 		hspeed = 0;
-		sprite_index = sprIdle;
+		//sprite_index = sprIdle;	//This is overriding sprTimeout - CR
 	}
 	if(bGrappling == true)
 	{
@@ -80,7 +80,6 @@ if(!keyboard_check(ord("A"))) && !keyboard_check(ord("D"))
 		sprite_index = sprHang;
 	}
 }
-
 
 /*
 if position_meeting(x,y, objMovingPlatformPhys) 
