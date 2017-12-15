@@ -39,11 +39,6 @@ bGotHit = 0;
 // DEATH BUFFER 
 tDeathBuffer = 180;
 
-// SLIDE DASH TIMER 
-bDashing = false;
-//bCanSlide = false;
-//alarm[1] = tStopSlide; 
-
 // JUMPING PHYSICS VARIABLES 
 bUnspaced = true; //is the spacebar being held down
 bOnGround = false; //is Amelia on the ground

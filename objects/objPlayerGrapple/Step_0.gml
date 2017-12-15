@@ -7,34 +7,6 @@ scrPlayerMovement();
 // I guess..? I deleted it here and called the script, and now 
 // it works. Hooray.
 	     
-/// SLIDE DASH/DODGE CODE ///
-
-//She can apply the force in the air for some reason.
-//Fix Application of force when vk_down is pressed in air
-//limit the usage of slide dash to be much shorter; it can be used infinitely, given Amelia has stamina
-if keyboard_check(vk_down) || (gamepad_button_check(0, gp_shoulderr)) && keyboard_check(ord("D")) && iCurrentStamina > 14 && bCanSlide == true
-{
-	bDashing = true;
-	bUnspaced = true;
-	iCurrentStamina -= 0.25; 
-	physics_apply_impulse(x,y,220,0);
-	sprite_index = sprSlide;
-}
-if keyboard_check(vk_down) || (gamepad_button_check(0, gp_shoulderr)) && keyboard_check(ord("A")) && iCurrentStamina > 14 && bCanSlide == true
-{
-	bDashing = true;
-	bUnspaced = true;
-	iCurrentStamina -= 0.25; 
-	physics_apply_impulse(x,y,-220,0);
-	sprite_index = sprSlide;
-}
-if keyboard_check_released(vk_down)
-{
-	bDashing = false;
-}
-
-/// END SLIDE DASH ///
-
 /////// JUMP CONDITIONS AND FUNCTIONALITY //////
 
 //Used to see if the space key has been released since last successful jump
