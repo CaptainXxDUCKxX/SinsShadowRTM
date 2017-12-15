@@ -10,7 +10,7 @@ bUrsaDebugMode = 1;
 bUrsaMoveRight = false;
 
 // Ursa's Damage Variables and Timer
-iUrsaDamage = 10;
+iUrsaDamage = 50;
 bCanAttack = false;
 bAttacking = false;
 bInRange = false;
