@@ -2,6 +2,8 @@
 // You can write your code in this editor
 
 HPtoPlayer = 20;
+bFadeIn = true;
+image_alpha = 0.5;
 
 /*
 if (iCurrentHP <= iMaxHP)
