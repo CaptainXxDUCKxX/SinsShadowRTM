@@ -5,8 +5,8 @@ scrGrapple();
 scrPlayerMovement();
 /// The grapple was broken because it was being called here, 
 // I guess..? I deleted it here and called the script, and now 
-// it works. Hooray.
-	     
+// it works. Hooray
+
 /////// JUMP CONDITIONS AND FUNCTIONALITY //////
 
 //Used to see if the space key has been released since last successful jump
@@ -98,12 +98,4 @@ tDmgBuffer -= 1;
 if(tDmgBuffer <= 0)
 {
 	bCanTakeDamage = true;
-}
-
-//TIMEOUT ANIMATION
-
-if (hspeed == 0 && vspeed == 0 && alarm [3] = -1)
-{
-	bDoingNothing = true;
-	alarm [3] = (room_speed * 3);
 }
