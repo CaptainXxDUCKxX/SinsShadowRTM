@@ -24,7 +24,7 @@ if(keyboard_check_released(vk_up)) && (bGrappling == true) || (gamepad_button_ch
 
 if(bGrappling)
 {
-	instance
+	//instance
 }
 
 /// ACCURATE GRAPPLING /// 
