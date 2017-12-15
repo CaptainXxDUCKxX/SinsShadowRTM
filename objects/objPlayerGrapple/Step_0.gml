@@ -7,6 +7,16 @@ scrPlayerMovement();
 // I guess..? I deleted it here and called the script, and now 
 // it works. Hooray
 
+/// Attempting to spawn an object with the press of a button
+// Trying to draw a line between Amelia, two objects, and THEN the Grapple Point -- 12/15/17 3:02pm
+// This suddenly started working (15 mins after it wasn't) -- 12/15/17 3:07pm
+/*
+if(keyboard_check_pressed(vk_up))
+{
+	instance_create_layer(x+20, y-41, "Player", objGP2);
+}
+*/
+
 /////// JUMP CONDITIONS AND FUNCTIONALITY //////
 
 //Used to see if the space key has been released since last successful jump
