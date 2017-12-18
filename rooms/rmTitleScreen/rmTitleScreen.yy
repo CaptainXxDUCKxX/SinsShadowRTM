@@ -122,6 +122,43 @@
             "vtiled": false,
             "x": 0,
             "y": 0
+        },
+        {
+            "__type": "GMRBackgroundLayer_Model:#YoYoStudio.MVCFormat",
+            "id": "d8080642-dab2-4e7b-ab73-889570b11db4",
+            "modelName": "GMRBackgroundLayer",
+            "mvc": "1.0",
+            "depth": 200,
+            "grid_x": 32,
+            "grid_y": 32,
+            "hierarchyFrozen": false,
+            "hierarchyVisible": true,
+            "inheritLayerDepth": false,
+            "inheritLayerSettings": false,
+            "inheritSubLayers": false,
+            "inheritVisibility": false,
+            "layers": [
+                
+            ],
+            "m_parentID": "00000000-0000-0000-0000-000000000000",
+            "m_serialiseFrozen": false,
+            "name": "rmBGGrass",
+            "userdefined_depth": false,
+            "visible": true,
+            "animationFPS": 15,
+            "animationSpeedType": 0,
+            "colour": {
+                "Value": 4294967295
+            },
+            "hspeed": 0,
+            "htiled": false,
+            "spriteId": "75764823-5938-49cb-9182-38568fae3a9d",
+            "stretch": false,
+            "userdefined_animFPS": false,
+            "vspeed": 0,
+            "vtiled": false,
+            "x": 0,
+            "y": 0
         }
     ],
     "parentId": "00000000-0000-0000-0000-000000000000",
@@ -140,7 +177,7 @@
         "modelName": "GMRoomSettings",
         "mvc": "1.0",
         "Height": 768,
-        "Width": 1024,
+        "Width": 5120,
         "inheritRoomSettings": false,
         "persistent": false
     },
