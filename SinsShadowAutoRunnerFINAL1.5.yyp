@@ -263,6 +263,14 @@
             }
         },
         {
+            "Key": "45f16c21-45f4-4796-a0f1-563befd8b188",
+            "Value": {
+                "id": "6cfbcaa7-6085-4640-b7cc-0c228ca63419",
+                "resourcePath": "objects\\objBigAssHealthPickUp\\objBigAssHealthPickUp.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "4b29c1b5-ecef-4ebe-8bbd-d7aba1430f14",
             "Value": {
                 "id": "4e4d6d60-d6c2-4bb3-941b-ce46059f9b9e",
@@ -564,6 +572,14 @@
                 "id": "01cc75b6-74b5-409a-94b3-081f1359db62",
                 "resourcePath": "objects\\objRope\\objRope.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "98a691d0-1c32-4f4f-bb05-fd4535352885",
+            "Value": {
+                "id": "c1da3cfc-d04e-4d3d-9e25-ef5d70c0c575",
+                "resourcePath": "sprites\\sprBigAssHealthPickUp\\sprBigAssHealthPickUp.yy",
+                "resourceType": "GMSprite"
             }
         },
         {

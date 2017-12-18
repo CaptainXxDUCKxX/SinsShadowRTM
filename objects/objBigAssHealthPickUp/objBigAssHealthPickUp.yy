@@ -5,7 +5,7 @@
     "name": "objBigAssHealthPickUp",
     "eventList": [
         {
-            "id": "26797a8b-927c-40a9-82cb-5cdc4bd88ecf",
+            "id": "96117bdc-14df-46f0-aadd-182c09e3c74f",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,
@@ -15,7 +15,7 @@
             "m_owner": "45f16c21-45f4-4796-a0f1-563befd8b188"
         },
         {
-            "id": "0050454b-df88-4691-a103-19477350a1f7",
+            "id": "3d3c3a64-5456-466d-9e75-e4b948cc17fc",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,
@@ -40,14 +40,14 @@
     "physicsShape": 0,
     "physicsShapePoints": [
         {
-            "id": "7e21dce4-0939-41b5-a680-31329aa54b29",
+            "id": "3fa042a1-fb6e-4c51-aa68-e11e3b61a67b",
             "modelName": "GMPoint",
             "mvc": "1.0",
             "x": 16,
             "y": 17
         },
         {
-            "id": "f249428b-9b99-403f-8cd3-4ad6fba4dbb5",
+            "id": "82e31824-df72-4bb0-8aa3-61517e3f423f",
             "modelName": "GMPoint",
             "mvc": "1.0",
             "x": 16,

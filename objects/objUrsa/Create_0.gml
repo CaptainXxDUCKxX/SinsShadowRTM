@@ -3,7 +3,7 @@ hit = 0;
 hspeed = 0;
 vspeed = 0; 
 
-ursaHP = 500; 
+ursaHP = 50000; 
 
 // Ursa's Pathing && Speed
 bUrsaDebugMode = 1;
