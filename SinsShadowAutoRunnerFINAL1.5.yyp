@@ -271,14 +271,6 @@
             }
         },
         {
-            "Key": "4f44eeb2-636c-4149-bd04-eec4290a8abd",
-            "Value": {
-                "id": "c65e68e8-d4fa-487f-8763-12b32f571f72",
-                "resourcePath": "objects\\objGP2\\objGP2.yy",
-                "resourceType": "GMObject"
-            }
-        },
-        {
             "Key": "506a4ab9-df7a-437e-bc01-64ae871fb77d",
             "Value": {
                 "id": "c4c5d282-e393-4c8b-9b24-d40819364873",
@@ -684,6 +676,14 @@
                 "id": "bb4c19f7-681a-4f9d-bb62-04e9cdd90405",
                 "resourcePath": "options\\linux\\options_linux.yy",
                 "resourceType": "GMLinuxOptions"
+            }
+        },
+        {
+            "Key": "aa87368c-23a6-4c8b-bbe9-ec2794a6341e",
+            "Value": {
+                "id": "23485c11-51d9-406b-a6b7-7850c9338d02",
+                "resourcePath": "tilesets\\tsFinalStageElements\\tsFinalStageElements.yy",
+                "resourceType": "GMTileSet"
             }
         },
         {
