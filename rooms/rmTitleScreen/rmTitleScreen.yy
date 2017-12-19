@@ -10,7 +10,8 @@
     "inheritLayers": false,
     "instanceCreationOrderIDs": [
         "124f0df9-04d0-4227-a9a7-9209c816f68a",
-        "f50b1547-9196-490e-94f7-d70fd47ca296"
+        "f50b1547-9196-490e-94f7-d70fd47ca296",
+        "97793eee-461b-4f8d-9f0f-8c8e9f903124"
     ],
     "layers": [
         {
@@ -83,6 +84,30 @@
                     "rotation": 0,
                     "scaleX": 1,
                     "scaleY": 1
+                },
+                {
+                    "id": "97793eee-461b-4f8d-9f0f-8c8e9f903124",
+                    "modelName": "GMRInstance",
+                    "mvc": "1.0",
+                    "ignore": false,
+                    "inheritItemSettings": false,
+                    "m_originalParentID": "00000000-0000-0000-0000-000000000000",
+                    "m_serialiseFrozen": false,
+                    "name": "inst_2AFE9113",
+                    "x": 0,
+                    "y": 0,
+                    "IsDnD": false,
+                    "colour": {
+                        "Value": 4294967295
+                    },
+                    "creationCodeFile": "",
+                    "creationCodeType": "",
+                    "inheritCode": false,
+                    "name_with_no_file_rename": "inst_2AFE9113",
+                    "objId": "9ca16b3b-35be-40eb-8b8c-46d182892091",
+                    "rotation": 0,
+                    "scaleX": 1,
+                    "scaleY": 1
                 }
             ]
         },
@@ -105,7 +130,7 @@
             ],
             "m_parentID": "00000000-0000-0000-0000-000000000000",
             "m_serialiseFrozen": false,
-            "name": "Background",
+            "name": "rmBGTitle",
             "userdefined_depth": false,
             "visible": true,
             "animationFPS": 15,
@@ -150,9 +175,83 @@
             "colour": {
                 "Value": 4294967295
             },
-            "hspeed": 0,
-            "htiled": false,
+            "hspeed": -7,
+            "htiled": true,
             "spriteId": "75764823-5938-49cb-9182-38568fae3a9d",
+            "stretch": false,
+            "userdefined_animFPS": false,
+            "vspeed": 0,
+            "vtiled": false,
+            "x": 0,
+            "y": 0
+        },
+        {
+            "__type": "GMRBackgroundLayer_Model:#YoYoStudio.MVCFormat",
+            "id": "f7e11a81-331f-4270-bd3c-06f6264774ba",
+            "modelName": "GMRBackgroundLayer",
+            "mvc": "1.0",
+            "depth": 300,
+            "grid_x": 32,
+            "grid_y": 32,
+            "hierarchyFrozen": false,
+            "hierarchyVisible": true,
+            "inheritLayerDepth": false,
+            "inheritLayerSettings": false,
+            "inheritSubLayers": false,
+            "inheritVisibility": false,
+            "layers": [
+                
+            ],
+            "m_parentID": "00000000-0000-0000-0000-000000000000",
+            "m_serialiseFrozen": false,
+            "name": "rmBGGround",
+            "userdefined_depth": false,
+            "visible": true,
+            "animationFPS": 15,
+            "animationSpeedType": 0,
+            "colour": {
+                "Value": 4294967295
+            },
+            "hspeed": -2,
+            "htiled": true,
+            "spriteId": "dbed66f6-df5e-4a70-a941-0c7213d6374e",
+            "stretch": false,
+            "userdefined_animFPS": false,
+            "vspeed": 0,
+            "vtiled": false,
+            "x": 0,
+            "y": 0
+        },
+        {
+            "__type": "GMRBackgroundLayer_Model:#YoYoStudio.MVCFormat",
+            "id": "2eae83dc-2c81-46f0-8f87-b2694f0084fd",
+            "modelName": "GMRBackgroundLayer",
+            "mvc": "1.0",
+            "depth": 400,
+            "grid_x": 32,
+            "grid_y": 32,
+            "hierarchyFrozen": false,
+            "hierarchyVisible": true,
+            "inheritLayerDepth": false,
+            "inheritLayerSettings": false,
+            "inheritSubLayers": false,
+            "inheritVisibility": false,
+            "layers": [
+                
+            ],
+            "m_parentID": "00000000-0000-0000-0000-000000000000",
+            "m_serialiseFrozen": false,
+            "name": "rmBGClouds",
+            "userdefined_depth": false,
+            "visible": true,
+            "animationFPS": 0.5,
+            "animationSpeedType": 0,
+            "colour": {
+                "Value": 4294967295
+            },
+            "hspeed": -0.5,
+            "htiled": true,
+            "spriteId": "915f8954-ee7f-411c-9f89-19029c28408b",
             "stretch": false,
             "userdefined_animFPS": false,
             "vspeed": 0,
@@ -187,7 +286,7 @@
         "mvc": "1.0",
         "clearDisplayBuffer": true,
         "clearViewBackground": false,
-        "enableViews": false,
+        "enableViews": true,
         "inheritViewSettings": false
     },
     "views": [
@@ -200,9 +299,9 @@
             "hspeed": -1,
             "hview": 768,
             "inherit": false,
-            "objId": "00000000-0000-0000-0000-000000000000",
+            "objId": "9ca16b3b-35be-40eb-8b8c-46d182892091",
             "vborder": 32,
-            "visible": false,
+            "visible": true,
             "vspeed": -1,
             "wport": 1024,
             "wview": 1024,
