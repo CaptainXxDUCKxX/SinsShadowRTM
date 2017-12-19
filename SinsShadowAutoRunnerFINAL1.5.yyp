@@ -450,7 +450,7 @@
             "Key": "75764823-5938-49cb-9182-38568fae3a9d",
             "Value": {
                 "id": "3ce1ce39-950d-4f9e-ac52-22812f105fd4",
-                "resourcePath": "sprites\\sprTitleBG\\sprTitleBG.yy",
+                "resourcePath": "sprites\\sprTitleBGGrass\\sprTitleBGGrass.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -603,6 +603,14 @@
             "Value": {
                 "id": "0687e019-d62a-4a9a-bbf4-b651077dd239",
                 "resourcePath": "objects\\objLink\\objLink.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "9ca16b3b-35be-40eb-8b8c-46d182892091",
+            "Value": {
+                "id": "7c795651-15bc-4352-bdcf-1721106e72e3",
+                "resourcePath": "objects\\objTitleScreen\\objTitleScreen.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -907,6 +915,14 @@
             "Value": {
                 "id": "8e41bf77-ed90-4c99-bdfd-21273e406a95",
                 "resourcePath": "sprites\\sprStageElements\\sprStageElements.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "dbed66f6-df5e-4a70-a941-0c7213d6374e",
+            "Value": {
+                "id": "b201e7e2-f112-4ddd-ba50-bf68e956e07e",
+                "resourcePath": "sprites\\sprTitleBGGround\\sprTitleBGGround.yy",
                 "resourceType": "GMSprite"
             }
         },
